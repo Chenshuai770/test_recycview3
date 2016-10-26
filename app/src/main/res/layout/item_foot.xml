@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="#d10808">
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/item_srf"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    >
 
 
-    </android.support.v4.widget.SwipeRefreshLayout>
+    <ProgressBar
+        android:layout_marginRight="6dp"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <TextView
+       style="@style/SmallTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="正在加载中..." />
+
 
 </LinearLayout>

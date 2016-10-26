@@ -57,11 +57,16 @@ public class MainActivity extends AppCompatActivity {
         btn= (Button) findViewById(R.id.btn);
         initView();
         recycle.addItemDecoration(new MyDecoration(getApplicationContext(),MyDecoration.VERTICAL_LIST));
+        MyAnimator animator = new MyAnimator();
+        animator.setChangeDuration(2000);
+        recycle .setItemAnimator(animator);
         adapter.setOnItemClickLitener(new MyAdapter.OnItemClickLitener() {
             @Override
             public void onItemClick(View view, int position) {
                 Toast.makeText(getApplicationContext(), "你点击了"+position+"个", Toast.LENGTH_SHORT).show();
             }
+
+
 
             @Override
             public void onItemLongClick(View view, int position) {

@@ -147,10 +147,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder> {
             return;
         }else {
 
-            holder.srf_foot.setProgressBackgroundColorSchemeResource(android.R.color.white);
+            /*holder.srf_foot.setProgressBackgroundColorSchemeResource(android.R.color.white);
             holder.srf_foot.setColorSchemeResources(android.R.color.holo_blue_light,
                     android.R.color.holo_red_light,android.R.color.holo_orange_light,
-                    android.R.color.holo_green_light);
+                    android.R.color.holo_green_light);*/
            // holder.srf_foot.setRefreshing(true);
             // 如果设置了回调，则设置点击事件
             return;
@@ -175,6 +175,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder> {
         public   TextView tv_content;
         public   TextView tv_header;
         public   TextView tv_footer;
+
         public SwipeRefreshLayout srf_foot;
         public ItemViewHolder(View itemView) {
             super(itemView);
@@ -183,7 +184,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder> {
                 return;
             }
             if (itemView == mFooterView){
-                srf_foot= (SwipeRefreshLayout) itemView.findViewById(R.id.item_srf);
+               // srf_foot= (SwipeRefreshLayout) itemView.findViewById(R.id.item_srf);
                 return;
             }
             tv_content= (TextView) itemView.findViewById(R.id.item_text);
